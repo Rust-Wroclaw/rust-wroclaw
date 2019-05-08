@@ -1,2 +1,7 @@
 # rust-wroclaw
-Place to store all additional stuff: slides and source codes etc.
+====
+
+[Past talks](talk-archive/README.md)
+
+[Talk requests](talk-requests/README.md)
+
