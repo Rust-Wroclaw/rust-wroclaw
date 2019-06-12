@@ -13,4 +13,7 @@ Bartłomiej Kuras, "Objective design meets Rust", [objective-rust.pdf](01-2019-o
 # 10.2018
 Grzegorz Wilczyński, "Rewrite them all", [rewrite-them-all.pdf](10-2018-rewrite-them-all.pdf)
 
+# 09.2018
+
+Maciej Talaśka, "Why Rust?", [Why Rust?](https://maciektalaska.github.io/why_rust/)
 
