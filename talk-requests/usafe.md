@@ -1,19 +1,21 @@
-# Talk o pisaniu unsafe kodu
-Czasem mówi się, że kod w Ruscie w ogóle nie potrzebuje unsafe,
-niekiedy z taką stanowczością, że wydawałoby się, że jest to
-feature który mógłby nie istnieć w publicznym API języka.
+# Unsafe code guidelines
+There is opinion, that Rust code doesn't need to be `unsafe` at all,
+sometimes even, that `unsafe` shouldn't be available as public
+Rust API.
 
-Z drugiej strony są głosy, że u`unsafe` wcale nie jest sam w sobie
-niebezpieczny, moze być tylko źle użyty.
+On the other hand, there are people claiming, that `unsafe` isn't bad
+at all, and not dangerous as itself, it just can be missused as
+everything else.
 
-Jeszcze inni zauważają, że `unsafe` powoduje degradację Rusta
-do języków typu C, bo można za jego pomocą wyłączyć wszelkie gwarancje
-języka.
+The third camp points, that `usafe` may possibly degenerate Rust
+into level of languages as C, because it allows to disable any
+language guarantees possibly in whole codebase.
 
-Jak to z tym jest? Przydała by się prelekcja o tym czym tak na prawdę jest
-`unsafe`, jakie są jego dobre i złe strony, najlepiej z przykładami "dobrego"
-użycia, być może zostawiającego z jakimiś guidelinami.
+What is a truth? Maybe there would be good to have lecture what `unsafe`
+actually is, with its pros and cons, maybe some examples about "correct"
+or "safe" usage of it, and leaving some guidelines about creating `unsafe`
+code.
 
-## Materialy
-Warto byłoby oprzeć się o [Rustonomicon](https://doc.rust-lang.org/nomicon/)
-i [Unsafe guidelines](https://github.com/rust-lang/unsafe-code-guidelines)
+## Sources
+* [Rustonomicon](https://doc.rust-lang.org/nomicon/)
+* [Unsafe guidelines](https://github.com/rust-lang/unsafe-code-guidelines)
