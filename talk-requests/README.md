@@ -6,4 +6,4 @@ In case you know a lot about Rust, and you wonder what would our members fancy -
 Talk requests:
 ----
 
-
+[Unsafe guiedelines](usafe.rs)
