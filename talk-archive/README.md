@@ -1,6 +1,9 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
 
+# 10.2019
+Jakub Trąd, "How to make your own Steam Overlay", [steam-overlay.pd](10-2019-how-to-make-your-own-steam-overlay.pdf)
+
 # 06.2019
 Wojciech Polak, "System for world building and sharing notes from role-play session", [rpg-notes.pdf](06-2019-rpg-notes.pdf)
 
