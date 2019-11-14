@@ -1,5 +1,7 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
+# 11.2019
+Tomasz Drwięga, "My 3 years in Rust", [Slides](https://slides.com/tomaszdrwiega/my-3-years-in-rust)
 
 # 10.2019
 Jakub Trąd, "How to make your own Steam Overlay", [steam-overlay.pd](10-2019-how-to-make-your-own-steam-overlay.pdf)
