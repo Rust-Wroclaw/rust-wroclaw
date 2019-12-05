@@ -1,13 +1,13 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
-# 11.2019
-Tomasz Drwięga, "My 3 years in Rust", [Slides](https://slides.com/tomaszdrwiega/my-3-years-in-rust)
 
 # 12.2019
 Wojciech Polak, "Self-referential structs and how to create them", [self-referential-structs.pdf](12-2019-self-referential-structs.pdf)
 
 # 11.2019
 Bartłomiej Kuras, "Why Rust?", [why-rust.pdf](11-2019-why-rust.pdf)
+
+Tomasz Drwięga, "My 3 years in Rust", [Slides](https://slides.com/tomaszdrwiega/my-3-years-in-rust)
 
 # 10.2019
 Jakub Trąd, "How to make your own Steam Overlay", [steam-overlay.pdf](10-2019-how-to-make-your-own-steam-overlay.pdf)
