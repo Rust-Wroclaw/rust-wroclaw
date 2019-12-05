@@ -1,5 +1,7 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
+# 11.2019
+Tomasz Drwięga, "My 3 years in Rust", [Slides](https://slides.com/tomaszdrwiega/my-3-years-in-rust)
 
 # 12.2019
 Wojciech Polak, "Self-referential structs and how to create them", [self-referential-structs.pdf](12-2019-self-referential-structs.pdf)
