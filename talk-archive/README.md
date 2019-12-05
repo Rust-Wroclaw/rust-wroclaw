@@ -1,6 +1,9 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
 
+# 12.2019
+Wojciech Polak, "Self-referential structs and how to create them", [self-referential-structs.pdf](12-2019-self-referential-structs.pdf)
+
 # 11.2019
 Bartłomiej Kuras, "Why Rust?", [why-rust.pdf](11-2019-why-rust.pdf)
 
