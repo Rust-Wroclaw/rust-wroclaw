@@ -11,6 +11,8 @@ Bartłomiej Kuras, "Why Rust?", [why-rust.pdf](11-2019-why-rust.pdf)
 
 Tomasz Drwięga, "My 3 years in Rust", [Slides](https://slides.com/tomaszdrwiega/my-3-years-in-rust)
 
+Łukasz Biel, "Building custom CLI app by example", [building-cli-app.pdf](11-2019-building-cli-app.pdf)
+
 # 10.2019
 Jakub Trąd, "How to make your own Steam Overlay", [steam-overlay.pdf](10-2019-how-to-make-your-own-steam-overlay.pdf)
 
