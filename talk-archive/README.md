@@ -4,6 +4,8 @@ Archive of talks given on Rust-Wroclaw community meetups:
 # 12.2019
 Wojciech Polak, "Self-referential structs and how to create them", [self-referential-structs.pdf](12-2019-self-referential-structs.pdf)
 
+Jakub Trąd, "What is WebAssembly?", [what-is-webassembly](12-2019-what-is-webassembly.pdf)
+
 # 11.2019
 Bartłomiej Kuras, "Why Rust?", [why-rust.pdf](11-2019-why-rust.pdf)
 
@@ -26,24 +28,24 @@ Piotr Bielak, "docker-cmd - a guide to your first Rust project", [docker-cmd.pdf
 
 # 02.2019
 
-Wojciech Polak, "Implement your own language with Rust in 1 hour" 
+Wojciech Polak, "Implement your own language with Rust in 1 hour"
 
 # 01.2019
 Bartłomiej Kuras, "Objective design meets Rust", [objective-rust.pdf](01-2019-objective-rust.pdf)
 
 # 11.2018
-Jakub Jagusztyn, "A tour of cargo" 
+Jakub Jagusztyn, "A tour of cargo"
 
-Wojciech Polak, "Parser combinators and how to use Impl Trait to implement them" 
+Wojciech Polak, "Parser combinators and how to use Impl Trait to implement them"
 
 # 10.2018
 Grzegorz Wilczyński, "Rewrite them all", [rewrite-them-all.pdf](10-2018-rewrite-them-all.pdf)
 
-Tomasz Barański "No matter how far I go, I always go back to native" 
+Tomasz Barański "No matter how far I go, I always go back to native"
 
-Aleksander Fular "EnumMap - clear and safe container/EnumMap - Klarowny i bezpieczny kontener" 
+Aleksander Fular "EnumMap - clear and safe container/EnumMap - Klarowny i bezpieczny kontener"
 
- 
+
 # 09.2018
 
 Mateusz Kubaszek, "Mathematical Model in Rust -> first step to make Rust more useful for science"
