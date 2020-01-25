@@ -1,6 +1,9 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
 
+# 01.2020
+Jakub Trąd, "WebAssembly - a practical introduction", [introduction-to-webassembly.pdf](01-2020-introduction-to-webassembly.pdf)
+
 # 12.2019
 Wojciech Polak, "Self-referential structs and how to create them", [self-referential-structs.pdf](12-2019-self-referential-structs.pdf)
 
