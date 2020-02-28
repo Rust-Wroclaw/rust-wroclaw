@@ -1,0 +1,53 @@
+<head>
+    <meta charset="utf8"/>
+    <title>rusty-cabs spy</title>
+</head>
+<body>
+<canvas id="map" height="1024px" width="1024px"></canvas>
+<img id="cab" src="taxi.png" style="display:none"/>
+
+<script>
+    function refreshMap(cabs) {
+        const map = document
+            .getElementById('map')
+            .getContext('2d');
+
+        const cabImage = document.getElementById('cab');
+
+        map.fillStyle = 'rgba(255, 255, 255, 1)';
+        map.fillRect(0, 0, map.canvas.width, map.canvas.height);
+
+        for (const cab of cabs) {
+            const x = cab.position.x;
+            const y = cab.position.y;
+            const driver = cab.driver;
+
+            // Print the cab's icon
+            map.drawImage(cabImage, x - 50, y - 40, 100, 80);
+
+            // Print the cab's driver name
+            map.fillStyle = 'rgba(0, 0, 0, 1)';
+            map.font = '30px Open Sans';
+
+            const driverCaptionWidth = map.measureText(driver).width;
+
+            map.fillText(driver, x - driverCaptionWidth / 2.0, y - 35);
+        }
+    }
+
+    async function poll() {
+        try {
+            const reply = await fetch('http://127.0.0.1:1337/cabs');
+            const cabs = await reply.json();
+
+            refreshMap(cabs);
+        } catch (err) {
+            console.error(err);
+        }
+
+        setTimeout(poll, 1000);
+    }
+
+    poll();
+</script>
+</body>
