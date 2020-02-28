@@ -4,6 +4,9 @@ Archive of talks given on Rust-Wroclaw community meetups:
 # 02.2020
 Rafał Chabowski, "Make yourself a new Lint", [make-yourself-a-new-lint.pdf](02-2020-make-yourself-a-new-lint.pdf)
 
+# 01.2020
+Jakub Trąd, "WebAssembly - a practical introduction", [introduction-to-webassembly.pdf](01-2020-introduction-to-webassembly.pdf)
+
 # 12.2019
 Wojciech Polak, "Self-referential structs and how to create them", [self-referential-structs.pdf](12-2019-self-referential-structs.pdf)
 
