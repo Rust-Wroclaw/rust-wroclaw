@@ -2,7 +2,7 @@ Archive of talks given on Rust-Wroclaw community meetups:
 ----
 
 # 02.2020
-Rafał Chabowski, "Make youself a new Lint", [make-yourself-a-new-lint.pdf](02-2020-make-yourself-a-new-lint.pdf)
+Rafał Chabowski, "Make yourself a new Lint", [make-yourself-a-new-lint.pdf](02-2020-make-yourself-a-new-lint.pdf)
 
 # 12.2019
 Wojciech Polak, "Self-referential structs and how to create them", [self-referential-structs.pdf](12-2019-self-referential-structs.pdf)
