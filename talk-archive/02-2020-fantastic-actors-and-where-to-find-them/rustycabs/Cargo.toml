@@ -1,0 +1,13 @@
+[package]
+name = "rustycabs"
+version = "0.1.0"
+authors = ["Patryk Wychowaniec <wychowaniec.patryk@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0"
+derivative = "1.0"
+futures = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "0.2", features = ["full"] }
+warp = "0.2"
