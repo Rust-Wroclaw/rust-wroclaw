@@ -1,6 +1,9 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
 
+# 04.2020
+Rafał Chabowski, "Cow in a Box & Friends, a tale of smart pointers", [cow-in-a-box-smart-ptrs.pdf](04-2020-cow-in-a-box-smart-ptrs.pdf)
+
 # 02.2020
 Rafał Chabowski, "Make yourself a new Lint", [make-yourself-a-new-lint.pdf](02-2020-make-yourself-a-new-lint.pdf)
 
