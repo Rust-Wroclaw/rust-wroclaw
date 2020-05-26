@@ -7,7 +7,7 @@ Rafał Chabowski, "Cow in a Box & Friends, a tale of smart pointers", [cow-in-a-
 # 2020.02
 Rafał Chabowski, "Make yourself a new Lint", [make-yourself-a-new-lint.pdf](2020-02-make-yourself-a-new-lint.pdf)
 
-Patryk Wychowaniec, "Fantastic Actors and Where to Find Them", [fantastic-actors-and-where-to-find-them](2020-02-fantastic-actors-and-where-to-find-them.pdf)
+Patryk Wychowaniec, "Fantastic Actors and Where to Find Them", [fantastic-actors-and-where-to-find-them](2020-02-fantastic-actors-and-where-to-find-them.pdf) [Sources](https://github.com/Rust-Wroclaw/rust-wroclaw/tree/master/talk-archive/2020-02-fantastic-actors-and-where-to-find-them)
 
 # 2020.01
 Jakub Trąd, "WebAssembly - a practical introduction", [introduction-to-webassembly.pdf](2020-01-introduction-to-webassembly.pdf)
