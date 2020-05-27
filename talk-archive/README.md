@@ -1,6 +1,9 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
 
+# 2020.05
+Patryk Wychowaniec, "Scary Acronyms (and Super Creeps)", [scary-acronyms-and-super-creeps.pdf](2020-05-scary-acronyms-and-super-creeps.pdf)
+
 # 2020.04
 Rafał Chabowski, "Cow in a Box & Friends, a tale of smart pointers", [cow-in-a-box-smart-ptrs.pdf](2020-04-cow-in-a-box-smart-ptrs.pdf)
 
