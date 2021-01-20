@@ -1,6 +1,9 @@
 Archive of talks given on Rust-Wroclaw community meetups:
 ----
 
+# 2021.01
+Maciej Zieliński, "Casper Smart Contracts", [casper-smart-contracts.pdf](2021-01-casper-smart-contracts.pdf)
+
 # 2020.05
 Patryk Wychowaniec, "Scary Acronyms (and Super Creeps)", [scary-acronyms-and-super-creeps.pdf](2020-05-scary-acronyms-and-super-creeps.pdf)
 
