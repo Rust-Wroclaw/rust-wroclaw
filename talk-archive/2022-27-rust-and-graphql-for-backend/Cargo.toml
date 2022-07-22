@@ -1,0 +1,15 @@
+[package]
+name = "wrocrust-gql-talk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.5"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+
+async-graphql-axum = "4"
+async-graphql = { version = "4", features = ["tracing"] }
+
+futures = "0.3"
+async-stream = "0.3"
