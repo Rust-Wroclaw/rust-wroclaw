@@ -5,4 +5,4 @@ authors = ["Patryk Wychowaniec <wychowaniec.patryk@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-tokio = { version = "0.2", features = ["full"] }
+tokio = { version = "1.8", features = ["full"] }
