@@ -1,0 +1,256 @@
+\documentclass{beamer}
+\usepackage{minted}
+\usepackage{forest}
+
+\title{Rust and GraphQL for backend}
+\subtitle{Schema creation and basic features}
+\author{Maciek Zwoliński}
+\date{June 2022}
+
+\begin{document}
+  \frame {
+    \maketitle
+  }
+  \note {
+    GraphQL is a powerful and strongly typed way to expose your services for the clients. It is more and more often seen in various backends.
+
+    During this talk we will learn what is graphql and how to use it. We will play with it's basic features and try to create our own graphs of data.
+  }
+  \note {
+    Not-really-sure-what developer trying to take Rust for everything. I'm currently working in SatRev, developing ground and flight software for managing nanosatellites.
+    Also cats, linux and pizza lover.
+  }
+  \note {
+    GraphQL is a query language for describing the resources you want to get and also all the machinery for executing those queries in your backend.
+    It was created by facebook for their internal use and then open sourced in 2015.
+    Since then it gained some popularity and was implemented in many popular programming languages.
+  }
+  \begin{frame}{Graphql Schema}
+    \centering
+    \begin{forest}
+      [Root
+        [Query
+          [users]
+          [userById]
+        ]
+        [Mutation (optional)
+          [addUser]
+          [removeUser]
+        ]
+        [Subscription (optional)
+          [userRegistered]
+        ]
+      ]
+    \end{forest}
+  \end{frame}
+  \begin{frame}[fragile]
+    \scriptsize
+    \begin{minted}{rust}
+        struct User {
+            id: usize,
+            name: String,
+            surname: String,
+            age: u32,
+            car_id: Optional<usize>,  // references car.id
+        }
+
+        enum Brand {
+            Fiat,
+            Ford,
+            Opel,
+        }
+
+        struct Car {
+            id: usize,
+            brand: Brand,
+            model: String,
+            year: u32,
+            owner_id: usize,  // references user.id
+        }
+    \end{minted}
+  \end{frame}
+  \note {
+    Do you know REST?
+
+    Consider having some resources, let's say users and cars. We could define them as follows:
+
+    We're gonna use Rust for our definitions. We'll also make it look like if we had some relational database under the hood even tho there will be none during this talk :)
+
+    We'd probably want to have one to many relation for the user and his cars but let's just keep it simple at this moment.
+  }
+  \begin{frame}[fragile]{REST API}{Overfetching}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+          \scriptsize
+          \begin{minted}[autogobble]{javascript}
+              GET /users -> [
+                {
+                  "id": 0,  // this is unused
+                  "name": "Will",
+                  "surname": "Smith",
+                  "age": 32,
+                  "car_id": null  // so is this
+                },
+                ...
+              ]
+          \end{minted}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+          Users:
+          \begin{itemize}
+            \item Will Smith, 32 years
+            \item ...
+          \end{itemize}
+        \end{column}
+    \end{columns}
+  \end{frame}
+  \begin{frame}[fragile]{REST API}{Underfetching}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+          \scriptsize
+          \begin{minted}[autogobble]{javascript}
+              GET /users -> [
+                {
+                  "name": "Will",
+                  "car_id": 1,
+                  ...  // unused
+                },
+                {
+                  "name": "Agnieszka",
+                  "car_id": 3,
+                  ...  // unused
+                },
+                ...
+              ]
+              GET /cars/1 -> {
+                "brand": "Opel",
+                "model": "Astra",
+                "year": 1999  // unused
+              }
+              GET /cars/3 -> {
+                "brand": "Ford",
+                "model": "Focus",
+                "year": 2010  // unused
+              }
+          \end{minted}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+          Users:
+          \begin{itemize}
+            \item Will, Opel Astra
+            \item Agnieszka, Ford Focus
+            \item ...
+          \end{itemize}
+        \end{column}
+    \end{columns}
+  \end{frame}
+  \begin{frame}[fragile]{GraphQL API}{Declarative fetching}
+    \begin{columns}
+        \begin{column}{0.2\textwidth}
+          \scriptsize
+          \begin{minted}[autogobble]{javascript}
+              query {
+                users {
+                  name,
+                  surname,
+                  age
+                }
+              }
+
+
+
+              query {
+                users {
+                  name,
+                  car {
+                    brand,
+                    model
+                  }
+                }
+              }
+
+          \end{minted}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+          \scriptsize
+          \begin{minted}[autogobble]{javascript}
+            "users": [
+              {
+                "name": "Will",
+                "surname": "Smith",
+                "age": 32,
+              },
+              ...
+            ]
+
+
+            "users": [
+              {
+                "name": "Will",
+                "car": {
+                  "brand": "Opel"
+                  "model": "Astra"
+                }
+              },
+              ...
+            ]
+          \end{minted}
+        \end{column}
+        \begin{column}{0.44\textwidth}
+          \footnotesize
+          Users:
+          \begin{itemize}
+            \item Will Smith, 32 years
+            \item ...
+          \end{itemize}
+          \vspace{5.5em}
+          Users:
+          \begin{itemize}
+            \item Will, Opel Astra
+            \item ...
+          \end{itemize}
+          \vspace{5em}
+        \end{column}
+    \end{columns}
+  \end{frame}
+  \begin{frame}[fragile]{REST API}{Overfetching/Underfetching}
+    \begin{minted}{javascript}
+      GET /users_with_cars ?
+
+      GET /users?fields=name,surname ?
+
+      GET /users?cars=true&fields=name,surname
+          &car_fields=brand,model ?
+    \end{minted}
+  \end{frame}
+  \note {
+    Should we make an endpoint users\_with\_cars which will have different model of what it returns? Or maybe cars\_with\_owners would better suit our potential api consumers?
+
+    Or maybe we could add optional query params to control how fetched resources look like?
+
+    But this would be a complete mess when writing api documentation and having many different possible schemas returned from one endpoint
+  }
+  \frame {
+    Server side crates:
+
+    \quad- \underline{async-graphql}
+
+    \quad- juniper
+
+    \vspace{0.5em}
+
+    \small{both integrates well with popular backend crates like actix-web, axum, rocket, warp...}
+
+    \vspace{2em}
+
+    Client side crates:
+
+    \quad- graphql\_client
+
+    \quad- cynic
+
+    \vspace{0.5em}
+
+    \small{you can choose from different designs of strong typing but subscriptions are not quite there yet}
+  }
+\end{document}
